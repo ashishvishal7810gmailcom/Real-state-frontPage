@@ -1,0 +1,22 @@
+export const imageUrls = [
+    {'src':'./assets/images/buildings/a1.jpg'},
+    {'src':'./assets/images/buildings/a2.jpg'},
+    {'src':'./assets/images/buildings/a3.jpg'},
+    {'src':'./assets/images/buildings/a4.jpg'},
+    {'src':'./assets/images/buildings/a5.jpg'},
+    {'src':'./assets/images/buildings/a6.jpg'},
+    {'src':'./assets/images/buildings/a7.jpg'},
+    {'src':'./assets/images/buildings/a8.jpg'},
+    {'src':'./assets/images/buildings/a9.jpg'},
+    {'src':'./assets/images/buildings/a10.jpg'},
+    {'src':'./assets/images/buildings/a11.jpg'},
+    {'src':'./assets/images/buildings/a12.jpg'},
+    {'src':'./assets/images/buildings/a13.jpg'},
+    {'src':'./assets/images/buildings/a14.jpg'},
+    {'src':'./assets/images/buildings/a15.jpg'},
+    {'src':'./assets/images/buildings/a16.jpg'},
+    {'src':'./assets/images/buildings/a17.jpg'},
+    {'src':'./assets/images/buildings/a18.jpg'},
+    {'src':'./assets/images/buildings/a19.jpg'},
+    {'src':'./assets/images/buildings/a20.jpg'}
+];
