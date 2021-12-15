@@ -24,9 +24,9 @@ class Main extends Component {
       <div>
         <Header/>   
         <Switch>
-          <Route path="/feed" component={FeedPage} />
+          <Route path="/" component={FeedPage} />
           <Route exact path="/comingsoon" component={ComingSoonPage} />
-          <Redirect to="/feed" />
+          <Redirect to="/" />
         </Switch>
         <Footer />
       </div>
