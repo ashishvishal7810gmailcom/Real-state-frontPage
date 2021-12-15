@@ -19,20 +19,16 @@ class FBLogin extends Component {
 
         return (
 
-            // <div style={{display: 'flex',flexWrap: 'wrap' }} >                           
-                <FacebookLogin
-                    appId={222966759929270}
-                    autoLoad={false}
-                    fields="name,email,picture"
-                    callback={responseFacebook}
-                    cssClass="btnFacebook"
-                    icon={<i className="fa fa-facebook" style={{marginLeft:'20px'}}>
-                    </i>}
-                    textButton = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Continue with Facebook"                                                                
-                    />
-            // </div>
-
-                
+            <FacebookLogin
+                appId={123456789}
+                autoLoad={false}
+                fields="name,email,picture"
+                callback={responseFacebook}
+                cssClass="btnFacebook"
+                icon={<i className="fa fa-facebook" style={{marginLeft:'20px'}}>
+                </i>}
+                textButton = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Continue with Facebook"                                                                
+                />
         );
     }
 }

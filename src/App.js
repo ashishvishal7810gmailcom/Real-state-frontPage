@@ -23,7 +23,3 @@ class App extends Component {
 }
 
 export default App;
-
-// Account create/ signin  / forgot password
-// Account Search / request
-// My teams / chat/ meet tab

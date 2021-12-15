@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
-import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem, Jumbotron,
-    Button, Modal, ModalHeader, ModalBody,
+import { Button, Modal, ModalHeader, ModalBody,
     Form, FormGroup, Input, Label } from 'reactstrap';
-import { NavLink } from 'react-router-dom';
 import FBLogin from '../Logins/FacebookLoginComponent';
-import { Card, CardImg, CardImgOverlay, CardTitle, Breadcrumb, BreadcrumbItem,CardBody, CardHeader } from 'reactstrap';
 import GLogin from '../Logins/GoogleLoginComponent';
-import { th } from 'react-html-attributes';
 
 class SignUpModal extends Component {
 
@@ -16,9 +12,7 @@ class SignUpModal extends Component {
     }
 
     handleSignup(event) {
-        // alert(this.props.signupUser);
         this.props.toggleModal();
-        this.props.signupUser({firstname: this.firstname.value, lastname:this.lastname.value, username: this.usernames.value, password: this.passwords.value, email: this.email.value});
         event.preventDefault();
     }
 

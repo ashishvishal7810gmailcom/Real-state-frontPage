@@ -1,12 +1,6 @@
 import React, { Component } from 'react';
-import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem, Jumbotron,
-    Button, Modal, ModalHeader, ModalBody,
+import { Button, Modal, ModalHeader, ModalBody,
     Form, FormGroup, Input, Label } from 'reactstrap';
-import { NavLink } from 'react-router-dom';
-import FBLogin from '../../SocialLogins/FacebookLoginComponent';
-import { Card, CardImg, CardImgOverlay, CardTitle, Breadcrumb, BreadcrumbItem,CardBody, CardHeader } from 'reactstrap';
-import GLogin from '../../SocialLogins/GoogleLoginComponent';
-import { th } from 'react-html-attributes';
 
 class ForgotPasswordModal extends Component {
 
@@ -21,7 +15,6 @@ class ForgotPasswordModal extends Component {
     handleForgotPassword(event) {
         this.toggleModalForgotPassword();
         alert(this.email.value);
-        // this.props.loginUser({username: this.username.value, password: this.password.value});
         event.preventDefault();
 
     }

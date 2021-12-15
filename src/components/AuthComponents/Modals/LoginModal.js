@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
-import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem, Jumbotron,
-    Button, Modal, ModalHeader, ModalBody,
+import { Button, Modal, ModalHeader, ModalBody,
     Form, FormGroup, Input, Label } from 'reactstrap';
-import { NavLink } from 'react-router-dom';
 import FBLogin from '../Logins/FacebookLoginComponent';
-import { Card, CardImg, CardImgOverlay, CardTitle, Breadcrumb, BreadcrumbItem,CardBody, CardHeader } from 'reactstrap';
 import GLogin from '../Logins/GoogleLoginComponent';
 import ForgotPasswordModal from './ForgotPasswordModal';
 import SignUpModal from './SignUpModal';
@@ -66,8 +63,6 @@ class LoginModal extends Component {
 
     handleLogin(event) {
         this.props.toggleModal();
-        // alert(this.props.signupUser);
-        this.props.loginUser({username: this.username.value, password: this.password.value});
         event.preventDefault();
     }
 
@@ -130,7 +125,6 @@ class LoginModal extends Component {
                 <SignUpModal isModalOpen={this.state.isModalOpenSignup} 
                     toggleModal={this.toggleModalsignup}
                     changeModal={this.openSignupToSigninModal}
-                    signupUser={this.props.signupUser}
                     />
 
             </React.Fragment>
