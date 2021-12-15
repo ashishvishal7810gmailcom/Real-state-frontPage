@@ -1,6 +1,5 @@
-import React, { Component, useState } from 'react';
-import {Nav, Navbar, NavDropdown } from 'react-bootstrap';
-
+import React, { useState } from 'react';
+import {NavDropdown } from 'react-bootstrap';
 
 function Sell() {
   const [show, setShow] = useState(false);

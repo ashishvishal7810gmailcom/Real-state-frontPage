@@ -1,10 +1,7 @@
 import React from 'react';
 import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle } from 'reactstrap';
-import { baseUrl } from '../shared/baseUrl';
 import { FadeTransform } from 'react-animation-components';
-import { Spinner } from 'react-bootstrap';
 import { imageUrls } from '../shared/ImageUrl';
-import autoBind from 'react-autobind';
 
 function RenderCard( {image} ) {
     return(
@@ -48,6 +45,7 @@ class Feed extends React.Component {
             <div className="container">
                 <div className="row">
                     <h4>Buildings</h4>
+                    <hr />
                     {feeds}
                 </div>
             </div>

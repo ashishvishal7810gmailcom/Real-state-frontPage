@@ -2,10 +2,9 @@ import React from 'react';
 import Autosuggest from 'react-autosuggest';
 import match from 'autosuggest-highlight/match';
 import parse from 'autosuggest-highlight/parse';
-import { fetchSuggestions } from '../../redux/ActionCreators';
+import { fetchSuggestions } from '../../redux/suggestions/ActionCreator';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import autoBind from 'react-autobind';
 
 const mapStateToProps = state => {
   return {
@@ -26,26 +25,8 @@ class SearchAS extends React.Component {
     this.state = {
       value: '',
     };
-
-    autoBind(
-      this,
-      'getSuggestionValue',
-      'renderSuggestion',
-      'onSuggestionSelected',
-      'handleKeyDown'
-    );
   }
 
-  onSuggestionSelected(event, { suggestion, suggestionValue, suggestionIndex, sectionIndex, method }){
-    if(this.props.location.pathname === '/addusers') {
-      // alert("already at /addusers");
-    }
-    else {
-      this.props.history.push("/addusers");
-    }
-    this.props.fetchSearches(suggestionValue);
-  }
-  
   onChange = (event, { newValue, method }) => {
     this.setState({
       value: newValue
@@ -63,13 +44,12 @@ class SearchAS extends React.Component {
     });
   };
 
-  // bug here, initially there is true value which tries to fetch true as search term
   getSuggestionValue= (suggestion) => {
-    return suggestion.username;
+    return suggestion;
   }
 
   renderSuggestion= (suggestion, { query }) => {
-    const suggestionText = suggestion.username;
+    const suggestionText = suggestion;
     const matches = match(suggestionText, query);
     const parts = parse(suggestionText, matches);
   
@@ -90,20 +70,6 @@ class SearchAS extends React.Component {
     );
   }
 
-  handleKeyDown(event) {
-    switch (event.key) {
-      case 'Enter':
-        if(this.props.location.pathname === '/addusers') {
-          // alert("already at /addusers");
-        }
-        else {
-          this.props.history.push("/addusers");
-        }
-        this.props.fetchSearches(this.state.value);
-        break;
-    }
-  }
-
 
   render() {
     const { value } = this.state;
@@ -118,7 +84,6 @@ class SearchAS extends React.Component {
         <input {...inputProps} 
           onKeyPress={this.handleKeyDown}
         />
-        
       </div>
     );
 
@@ -132,8 +97,6 @@ class SearchAS extends React.Component {
         getSuggestionValue={this.getSuggestionValue}
         renderSuggestion={this.renderSuggestion}
         inputProps={inputProps} 
-        onSuggestionSelected={this.onSuggestionSelected}
-        // highlightFirstSuggestion='true'
         renderInputComponent={renderInputComponent}
         />
       </React.Fragment>
@@ -143,5 +106,4 @@ class SearchAS extends React.Component {
   }
 }
   
-// export default SearchAS;  
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(SearchAS));

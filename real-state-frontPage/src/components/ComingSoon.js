@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Card, CardImg, CardImgOverlay, CardTitle, Breadcrumb, BreadcrumbItem } from 'reactstrap';
 
 class ComingSoon extends Component {
     constructor(props) {

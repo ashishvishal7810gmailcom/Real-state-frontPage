@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
-import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem, Jumbotron,
-    Button, Modal, ModalHeader, ModalBody,
-    Form, FormGroup, Input, Label } from 'reactstrap';
-import { Link, NavLink } from 'react-router-dom';
+import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem } from 'reactstrap';
+import { NavLink } from 'react-router-dom';
 import SearchAS from './SearchASComponent';
-import { Card, CardImg, CardImgOverlay, CardTitle, Breadcrumb, BreadcrumbItem,CardBody, CardHeader } from 'reactstrap';
 import ModelPop from '../AuthComponents/LoginModalComponent';
-import { NavDropdown} from 'react-bootstrap';
 import autoBind from 'react-autobind';
 import Buy from '../SalesComponent/BuyComponent';
 import Sell from '../SalesComponent/SellComponent';
@@ -85,9 +81,7 @@ class Header extends Component {
                                     </Nav>
                                     <Nav className="ms-auto" navbar>
                                         <NavItem>
-                                            <Button style={{borderRadius:'18px'}}>
-                                                <span className="fa fa-sign-in fa-lg"></span> Login
-                                            </Button>
+                                            <ModelPop />
                                         </NavItem>
                                     </Nav>
                                 </Collapse>
